@@ -1,0 +1,406 @@
+/* ================= COURSE DETAIL PAGE ================= */
+.course-detail-wrapper {
+  padding: 24px;
+  background: #f8fafc;
+  min-height: calc(100vh - 80px);
+}
+
+.course-detail-panel {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* ================= COURSE HEADER ================= */
+.course-header {
+  padding: 32px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+}
+
+.course-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.course-meta-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-label {
+  font-size: 12px;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.meta-value {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* ================= TABS ================= */
+.course-tabs {
+  display: flex;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  overflow-x: auto;
+}
+
+.tab-button {
+  padding: 16px 24px;
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-button:hover {
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.tab-button.active {
+  color: #3b82f6;
+  background: white;
+  border-bottom-color: #3b82f6;
+  font-weight: 600;
+}
+
+/* ================= TAB CONTENT ================= */
+.tab-content {
+  padding: 32px;
+  min-height: 500px;
+}
+
+.tab-placeholder {
+  text-align: center;
+  padding: 60px 20px;
+  color: #64748b;
+}
+
+.tab-placeholder h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #334155;
+}
+
+/* ================= GENERATE PDF SECTION ================= */
+.generate-pdf-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.pdf-generation-box {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pdf-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+
+.pdf-generation-box h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.pdf-generation-box p {
+  font-size: 16px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ================= CONTENT SELECTION ================= */
+.content-selection h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.content-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.content-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.content-option:hover {
+  border-color: #3b82f6;
+  background: #f0f7ff;
+}
+
+.option-details h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.option-details p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ================= CUSTOM CHECKBOX ================= */
+.checkbox-container {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+}
+
+.checkbox-container input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  border-color: #3b82f6;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* ================= FORMAT OPTIONS ================= */
+.format-options h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.format-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.format-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.format-card:hover {
+  border-color: #3b82f6;
+  background: #f0f7ff;
+}
+
+.format-card h5 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.format-card p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* ================= GENERATE SECTION ================= */
+.generate-section {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.generate-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.generate-btn:active {
+  transform: translateY(0);
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 768px) {
+  .course-detail-wrapper {
+    padding: 16px;
+  }
+  
+  .course-header {
+    padding: 24px 20px;
+  }
+  
+  .course-header h1 {
+    font-size: 24px;
+  }
+  
+  .course-meta-info {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .course-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .tab-button {
+    padding: 14px 20px;
+    font-size: 13px;
+  }
+  
+  .tab-content {
+    padding: 24px 20px;
+  }
+  
+  .pdf-generation-box {
+    padding: 32px 24px;
+  }
+  
+  .pdf-icon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .pdf-generation-box h3 {
+    font-size: 20px;
+  }
+  
+  .pdf-generation-box p {
+    font-size: 14px;
+  }
+  
+  .content-option {
+    padding: 16px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .format-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .generate-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .course-header h1 {
+    font-size: 20px;
+  }
+  
+  .pdf-generation-box {
+    padding: 24px 16px;
+  }
+  
+  .pdf-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .pdf-generation-box h3 {
+    font-size: 18px;
+  }
+  
+  .generate-btn {
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+}

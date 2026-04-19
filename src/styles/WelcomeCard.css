@@ -1,0 +1,43 @@
+.welcome-card {
+  background: #1e3a8a;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 400px;
+  margin: 20px auto;   /* ⭐ center horizontally */
+}
+.profile-pic {
+  width: 95px;
+  height: 75px;
+
+  border-radius: 12px;
+  object-fit: cover;
+
+  background: white;
+  padding: 3px;
+
+  box-shadow: 0 6px 15px rgba(246, 242, 242, 0.15);
+}
+
+.text-section h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.text-section h3 {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 5px;
+  background: #b3dce9;
+  color: black;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}

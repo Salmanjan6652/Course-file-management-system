@@ -1,0 +1,180 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* LAYOUT */
+.layout {
+  display:block;
+}
+
+/* SIDEBAR */
+.sidebarContainer {
+  width: 240px;
+  height: 160vh;
+  background: #2d5bff;
+  color: white;
+  position:absolute;
+  left: 10px;
+  top: 90px;
+}
+
+/* MAIN */
+.main {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+}
+
+.header {
+  position: fixed;
+  left: 240px;
+  right: 0;
+  top: 0;
+}
+/* CONTENT AREA */
+.content {
+  padding: 20px;
+  margin-top: 80px;
+}
+
+/* TOP SECTION */
+.topSection {
+  display: flex;
+  justify-content: stretch;
+  width: 100%;
+}
+.welcome-card {
+  background: #1e3a8a;
+  color: white;
+
+  padding: 20px;
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  width: 100%;      
+  flex: 1;          
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.weekGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  padding: 8px;
+
+  margin-bottom: 20px;
+}
+
+/* CARD SMALL SIZE */
+.weekCard {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+
+  padding: 3px;          /* ⭐ smaller padding */
+  border-radius: 5px;
+
+  text-align: center;
+  cursor: pointer;
+
+  transition: 0.25s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+
+  font-size: 12px;       /* ⭐ smaller text */
+}
+
+/* HOVER */
+.weekCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.12);
+  border-color: #2d5bff;
+}
+
+
+.weekTitle {
+  font-weight: 800;      
+  font-size: 13px;
+  color: #111827;
+}
+
+/* WEEK DATE */
+.weekDate {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* OPTIONAL ACTIVE */
+.weekCard.active {
+  background: #2d5bff;
+  color: white;
+}
+
+/* OUTER WRAPPER */
+.dashboard-wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ⭐ COMMON PANEL STYLE */
+.dashboard-panel {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* CENTER PANEL (WELCOME CARD) */
+.dashboard-panel.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+/* WEEK GRID */
+.weekGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+/* WEEK CARD */
+.weekCard {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 6px;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25s;
+  font-size: 12px;
+}
+
+.weekCard:hover {
+  transform: translateY(-4px);
+  border-color: #2d5bff;
+}
+
+/* TEXT */
+.weekTitle {
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.weekDate {
+  font-size: 11px;
+  color: #6b7280;
+}

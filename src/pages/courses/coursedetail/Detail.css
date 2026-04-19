@@ -1,0 +1,308 @@
+/* ================= PAGE ================= */
+.page {
+  background: #f3f4f6;
+  min-height: 100vh;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ================= MAIN ================= */
+.main-container {
+  width: 100%;
+  max-width: 1100px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* ================= HEADER ================= */
+.course-header-card {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+.course-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.info h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000; /* BLACK TEXT */
+}
+
+.info p {
+  color: #4b5563;
+}
+
+.meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.meta span {
+  font-size: 13px;
+  color: #000;
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ================= TABS ================= */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-top: 18px;
+  background: #f1f5f9;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.tab.active {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ================= CONTENT ================= */
+.content {
+  margin-top: 20px;
+}
+
+/* ================= EMPTY ================= */
+.empty-box {
+  text-align: center;
+  padding: 50px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+  background: #f9fafb;
+}
+
+.big-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2563eb;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.big-add-btn:hover {
+  background: #1e40af;
+}
+
+/* ================= WEEK CARD ================= */
+.week-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: 0.2s;
+}
+
+.week-card:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* LEFT TAG */
+.week-tag {
+  background: #2563eb;
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  height: fit-content;
+}
+
+/* CONTENT (VERTICAL TOPICS) */
+.week-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.week-content p {
+  color: #000; /* BLACK TEXT */
+  font-size: 14px;
+}
+
+/* RIGHT SIDE */
+.file-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #eff6ff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #2563eb;
+}
+
+/* ACTION BUTTONS */
+.file-area button {
+  border: none;
+  background: #f3f4f6;
+  padding: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.file-area button:hover {
+  background: #e5e7eb;
+}
+
+/* ================= MODAL ================= */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= FORM ================= */
+.form-box {
+  width: 500px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.form-box h2 {
+  margin-bottom: 12px;
+  color: #000;
+}
+
+/* INPUTS */
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 10px;
+  color: #000;
+  background: #fff;
+}
+
+.form textarea {
+  min-height: 80px;
+}
+
+/* ================= TOPIC SECTION ================= */
+.topic-section {
+  margin-bottom: 10px;
+}
+
+.topic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.topic-header h4 {
+  color: #000;
+}
+
+/* ADD BUTTON */
+.topic-header button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* TOPIC CARD */
+.topic-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.topic-card label {
+  font-size: 13px;
+  color: #000;
+}
+
+.topic-card input {
+  margin-top: 5px;
+}
+
+/* DONE BUTTON */
+.topic-card button {
+  margin-top: 6px;
+  background: #10b981;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ================= SUBMIT ================= */
+.submit-btn {
+  width: 100%;
+  background: #2563eb;
+  color: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: #1e40af;
+}

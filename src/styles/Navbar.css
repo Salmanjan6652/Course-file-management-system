@@ -1,0 +1,45 @@
+.navbar {
+  height: 60px;
+  background: #2d5bff;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position:absolute;   /* ⭐ CHANGE THIS */
+  top: 0;
+  left: 0;       /* sidebar ke baad start */
+  right: 330px;
+
+  border-radius: 0;  /* optional */
+
+  z-index: 1000;
+}
+/* TITLE */
+.navTitle {
+  font-size: 18px;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+}
+
+/* ICONS */
+.navIcons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.navIcons svg {
+  width: 22px;
+  height: 22px;
+  color: white;
+  transition: 0.2s;
+}
+
+.navIcons svg:hover {
+  transform: scale(1.2);
+  color: #ffdd57;
+}
